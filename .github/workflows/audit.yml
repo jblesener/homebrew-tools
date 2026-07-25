@@ -1,0 +1,35 @@
+name: Audit formulas
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Homebrew/actions/setup-homebrew@master
+      - name: Check formula syntax
+        run: |
+          shopt -s nullglob
+          formulas=(Formula/*.rb)
+          if [ "${#formulas[@]}" -eq 0 ]; then
+            exit 0
+          fi
+          for formula in "${formulas[@]}"; do
+            ruby -c "$formula"
+          done
+      - name: Audit formulas
+        run: |
+          shopt -s nullglob
+          formulas=(Formula/*.rb)
+          if [ "${#formulas[@]}" -eq 0 ]; then
+            exit 0
+          fi
+          brew audit --strict --online "${formulas[@]}"
