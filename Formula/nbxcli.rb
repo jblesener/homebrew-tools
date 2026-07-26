@@ -1,27 +1,27 @@
 class Nbxcli < Formula
   desc "Command-line client for NetBox"
   homepage "https://github.com/jblesener/nbxcli"
-  version "1.3.0"
+  version "1.5.1"
 
   on_macos do
     on_arm do
-      url "https://github.com/jblesener/nbxcli/releases/download/1.3.0/nbxcli_1.3.0_darwin_arm64.tar.gz"
-      sha256 "db62b17e75218c1dc65043033fa6b922d4bd2957a01de0c8f42e60f6d5203c5f"
+      url "https://github.com/jblesener/nbxcli/releases/download/1.5.1/nbxcli_1.5.1_darwin_arm64.tar.gz"
+      sha256 "e741f84314628cc6d22ec36590bc3bb993d05c597d0c4cb14663bbedf1f7663d"
     end
     on_intel do
-      url "https://github.com/jblesener/nbxcli/releases/download/1.3.0/nbxcli_1.3.0_darwin_amd64.tar.gz"
-      sha256 "22e8ecea9d12cc386d37ab4aec65241b63a126bafd364f7290889ffa1e493efe"
+      url "https://github.com/jblesener/nbxcli/releases/download/1.5.1/nbxcli_1.5.1_darwin_amd64.tar.gz"
+      sha256 "bee3e4fd5d0aabb35dec48cba8f70f884a3d23b000d746296a204e493857bc38"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jblesener/nbxcli/releases/download/1.3.0/nbxcli_1.3.0_linux_arm64.tar.gz"
-      sha256 "6fd3cc094534da8ba4781d0eec0c6e07e5b70a9d9aedb6177f8c9a18c92788ad"
+      url "https://github.com/jblesener/nbxcli/releases/download/1.5.1/nbxcli_1.5.1_linux_arm64.tar.gz"
+      sha256 "4fc7fc0b6ea1b8be3901e699162d0d47cd996da8addf8c554b97bee3085d3157"
     end
     on_intel do
-      url "https://github.com/jblesener/nbxcli/releases/download/1.3.0/nbxcli_1.3.0_linux_amd64.tar.gz"
-      sha256 "ac8aaf674732eb02100c57e435077e73f6550d88e31aa1e8f49a05876591269c"
+      url "https://github.com/jblesener/nbxcli/releases/download/1.5.1/nbxcli_1.5.1_linux_amd64.tar.gz"
+      sha256 "c6f60bd5c95a546b8842b41ade9a47ab50e56fd46b074ff621d151586465e685"
     end
   end
 
